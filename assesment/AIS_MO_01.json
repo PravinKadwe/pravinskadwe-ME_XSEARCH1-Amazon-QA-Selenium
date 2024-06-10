@@ -1,0 +1,112 @@
+{
+"instruction_set":[
+  {
+    "description": "TestCase01.1: Ensure you go to amazon india website",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "Navigate"
+      },
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "amazon"
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Launch the Amazon India website",
+    "hint": "Ensure you go to amazon india website"
+  },
+  {
+    "description": "TestCase01.2: Ensure you check the url of the page",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "GetUrl"
+      },
+      {
+        "object_notation": "RESPONSE",
+        "operator": "contains",
+        "expected_value": "amazon"
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Get the url of the page",
+    "hint": "Ensure you check the url of the page"
+  },
+  {
+    "description": "TestCase02.1: Ensure you are sending laptop into the searchbar",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "laptop"
+      },
+      {
+        "object_notation": "RESPONSE",
+        "operator": "contains",
+        "expected_value": "TypeElement"
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Enter a search term \"laptop\" in search bar",
+    "hint": "Ensure you are sending laptop into the searchbar"
+  },
+  {
+    "description": "TestCase02.2: Ensure you are checking if 'Laptop' is in the search result titles or descriptions",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "GetElementText"
+      },
+      {
+        "object_notation": "RESPONSE",
+        "operator": "contains",
+        "expected_value": "Laptop"
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Assert that the resulting page contains the search term",
+    "hint": "Ensure you are checking if \"Laptop\" is in the search result titles or descriptions"
+  },
+  {
+    "description": "TestCase03.1: Ensure you are clicking on the navigation menu bar item 'Electronics'",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "ClickElement"
+      },
+      {
+        "object_notation": "RESPONSE",
+        "operator": "contains",
+        "expected_value": " "
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Click on a category from the navigation menu",
+    "hint": "Ensure you are clicking on the navigation menu bar item \"Electronics\""
+  },
+  {
+    "description": "TestCase03.2: Ensure you are checking the url of the page for 'Electronics'",
+    "validations": [
+      {
+        "object_notation": "COMMAND",
+        "operator": "contains",
+        "expected_value": "GetUrl"
+      },
+      {
+        "object_notation": "RESPONSE",
+        "operator": "contains",
+        "expected_value": "electronic"
+      }
+    ],
+    "is_enabled": true,
+    "error_out": "Assert that the resulting page corresponds to the clicked category",
+    "hint": "Ensure you are checking the url of the page for \"Electronics\""
+  }
+]
+}
